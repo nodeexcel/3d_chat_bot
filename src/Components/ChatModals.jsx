@@ -68,17 +68,35 @@ const Chat = () => {
 
         recognition.start();
     };
-
+    // const speak = (text) => {
+    //     const speech = new SpeechSynthesisUtterance(text);
+    //     const voices = window.speechSynthesis.getVoices();
+    
+    //     // Select a different voice (Example: British Male or Female voice)
+    //     const selectedVoice = voices.find((voice) => voice.name.includes("Google UK English Male")) || voices[0];
+        
+    //     if (selectedVoice) {
+    //         speech.voice = selectedVoice;
+    //     }
+    
+    //     speech.lang = "en-GB"; // Change language if needed
+    //     speech.rate = 1; // Adjust speaking speed (0.5 = slow, 2 = fast)
+    //     speech.pitch = 1; // Adjust pitch (0 = low, 2 = high)
+    
+    //     speechSynthesis.speak(speech);
+    // };
+    
     return (
-        <div className="h-[100vh] flex flex-col items-center bg-gray-900 text-white p-4">
+        <div className="h-[100vh] flex flex-col items-center bg-gray-900 text-white p-4 gap-1">
             {/* 3D Model */}
             <div className="w-full h-[30vh] bg-white rounded-md flex items-center justify-center">
-                <Canvas className="w-full h-full">
+                {/* <Canvas className="w-full h-full">
                     <OrbitControls />
                     <ambientLight intensity={1} />
                     <pointLight position={[5, 5, 5]} />
                     <Model isTalking={isTalking} />
-                </Canvas>
+                </Canvas> */}
+                <img src="/images/dog.gif" alt="Talking Dog" className=" h-full object-cover" />
             </div>
 
             {/* Chat Messages */}
